@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{%endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Часто задаваемые вопросы</h1>
+    {% for item in questions %}
+        <div class="alert alert-success" role="alert">
+            <h3>{{ item.question}}</h3>
+            <p>{{ item.answer }}</p>
+        </div>
+    {% endfor %}
+
+</div>
+{% endblock %}

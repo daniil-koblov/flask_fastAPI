@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center">
+<table class="table-striped-columns">
+  <thead>
+    <tr>
+      <th scope="col">Название</th>
+      <th scope="col">Цена</th>
+      <th scope="col">Картинка</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in hats %}
+    <tr>
+      <td class="col">{{ item.title }}</td>
+      <td class="col">{{ item.price }}</td>
+      <td class="col">
+        <img src={{item.picture }} class="img-thumbnail" alt="..." />
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+
+{% endblock %}

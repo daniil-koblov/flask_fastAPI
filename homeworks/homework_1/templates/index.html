@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %} {{ title }} {% endblock  %}
+
+{% block content %}
+<div class='container align-center'>
+    <h1>Категории товаров</h1>
+
+    <div class="container">
+        <div class="d-flex flex-row mb-3 text-center">
+          <div class="p-3">
+            <div class="card" style="width: 18rem;">
+                <img src="/static/images/clothes.jpg" class="card-img-top" alt="Одежда">
+                <div class="card-body">
+                  <h5 class="card-title">Одежда</h5>
+                  <p class="card-text">Мы продаем какую-то одежду</p>
+                  <a href="/clothes/" class="btn btn-primary">Посмотреть что продаем</a>
+                </div>
+            </div>
+          </div>
+          <div class="p-3">
+            <div class="card" style="width: 18rem;">
+                <img src="/static/images/shoes.jpg" class="card-img-top" alt="Обувь">
+                <div class="card-body">
+                  <h5 class="card-title">Обувь</h5>
+                  <p class="card-text">Если что-то понравится, заказывай</p>
+                  <a href="/shoes/" class="btn btn-primary">Посмотреть что есть</a>
+                </div>
+              </div>
+            </div>
+          <div class="p-3">
+            <div class="card" style="width: 18rem;">
+                <img src="/static/images/hats.jpg" class="card-img-top" alt="Наголовники">
+                <div class="card-body">
+                  <h5 class="card-title">Головные уборы</h5>
+                  <p class="card-text">Скоро лето, не забудь купить кепку или понамку</p>
+                  <a href="/hats/" class="btn btn-primary">Прям тут можно выбрать</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+  </div>
+{% endblock  %}
