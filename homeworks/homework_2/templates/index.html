@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} {{ super() }} {% endblock %}
+
+{% block content %}
+<div class="container text-center d-flex justify-content-center">
+    <div class="card" style="width: 18rem;">
+        <img src={{ url_for('static', filename='image/up.png') }} class="card-img-top" alt="Привет!" width="300">
+        <div class="card-body">
+            <h5 class="card-title">Приветствуем тебя {{ name }}</h5>
+            <p class="card-text">Спасибо что вернулсяна наш сайт</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

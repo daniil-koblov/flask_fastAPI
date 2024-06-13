@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{%endblock %}
+
+{% block content %}
+<div class="container">
+    <form method="post">
+        <div class="mb-3">
+            <label for="inputText" class="col-sm-2 col-form-label">Имя</label>
+            <input type="text" class="form-control" id="login" name='name'>
+        </div>
+        <div class="mb-3">
+            <label for="inputEmail" class="form-label">Адрес электронной почты</label>
+            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" name="mail">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Войти</button>
+    </form>
+</div>
+
+
+{% endblock %}
