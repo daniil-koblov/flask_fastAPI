@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{%endblock %}
+
+{% block content %}
+<div class='contaner'>
+    <h1> Главная страница </h1>
+    <hr>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if  messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} text-center">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <br>
+    <div class="text-center">
+        <img src="{{ url_for('static', filename='image/ths.jpg') }}" class="img-thumbnail rounded " alt="Спасибо!">
+    </div>
+</div>
+{% endblock %}
